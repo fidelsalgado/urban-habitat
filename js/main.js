@@ -1,13 +1,13 @@
 function main() {
-  cartodb.createVis('map', 'https://stanford.cartodb.com/u/fidelsalgado/api/v2/viz/a159608e-d112-11e5-96f5-0e31c9be1b51/viz.json', {
+  cartodb.createVis('map', 'https://stanford.cartodb.com/u/fidelsalgado/api/v2/viz/aef39022-d11f-11e5-9b9c-0ecfd53eb7d3/viz.json', {
       shareable: true,
       title: true,
       description: true,
       search: true,
       tiles_loader: true,
-      center_lat: 0,
-      center_lon: 0,
-      zoom: 2
+      center_lat: 37.569047,
+      center_lon: -122.32607961,
+      zoom: 17
       })
   .done(function(vis, layers) {
     // layer 0 is the base layer, layer 1 is cartodb layer
