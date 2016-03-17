@@ -13,16 +13,29 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
         <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-
-            html, body, #map {
-              height: 100%;
-              padding: 0;
-              margin: 0;
-            }
+          html, body {width:100%; height:100%; padding: 0; margin: 0;}
+          #map { width: 100%; height:100%; background: black;}
+          #menu { position: absolute; top: 90px; right: 20px; width: 400px; height:60px; background: transparent; z-index:10;}
+          #menu a { 
+            margin: 15px 10px 0 0;
+            float: right;
+            vertical-align: baseline;
+            width: 110px;
+            padding: 10px;
+            text-align: center;
+            font: bold 11px "Helvetica",Arial;
+            line-height: normal;
+            color: #555;
+            border-radius: 4px;
+            border: 1px solid #777777;
+            background: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          #menu a.selected,
+          #menu a:hover { 
+            color: #F84F40;
+          }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -35,9 +48,14 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id="map"></div>
+    <div id='menu'>
+      <a href="#northfairoaks" id="northfairoaks" class="button">North Fair Oaks</a> 
+      <a href="#sanmateo" id="sanmateo" class="button">San Mateo</a> 
+      <a href="#peninsula" id="peninsula" class="button selected">Peninsula</a> 
+    </div>
 
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
